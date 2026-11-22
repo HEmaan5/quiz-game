@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive web development quiz built with HTML, CSS and JavaScript.">
+  <title>Web Dev Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="quiz-container">
+    <h1 class="title">Web Dev Quiz</h1>
+
+    <!-- START SCREEN -->
+    <section id="start-screen" class="screen">
+      <p class="intro">Test your web development basics. 8 questions, one point each.</p>
+      <button id="start-btn" class="btn btn-primary">Start Quiz</button>
+    </section>
+
+    <!-- QUIZ SCREEN -->
+    <section id="quiz-screen" class="screen hidden" aria-live="polite">
+      <div class="status">
+        <span id="question-count">Question 1 of 8</span>
+        <span id="score-display">Score: 0</span>
+      </div>
+
+      <div class="progress" role="progressbar" aria-label="Quiz progress"
+           aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+
+      <h2 id="question-text" class="question"></h2>
+
+      <div id="options" class="options"></div>
+
+      <p id="feedback" class="feedback"></p>
+
+      <button id="next-btn" class="btn btn-primary hidden">Next Question</button>
+    </section>
+
+    <!-- RESULT SCREEN -->
+    <section id="result-screen" class="screen hidden">
+      <h2>Quiz Complete!</h2>
+      <p class="final-score"><span id="final-score">0</span> / <span id="total-questions">0</span></p>
+      <p id="result-message" class="result-message"></p>
+      <button id="restart-btn" class="btn btn-primary">Play Again</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
